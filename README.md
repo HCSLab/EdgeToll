@@ -41,21 +41,31 @@ All methods should be used as Post Request
 
 Register URL : "http://127.0.0.1:7545/regist/"
 for edge device to register in server
+this url will response a gas fee of open paymentchannel.
 parameter: 
-'address' : the blockchain ethereum address of edge (string in python)
+- 'address' : the blockchain ethereum address of edge (string in python)
 
 
-SendCheck URL : "http://127.0.0.1:7545/sendCheck/"
+Send Check URL : "http://127.0.0.1:7545/sendCheck/"
 for user to post cheque to proxy
+this url will response a cost of publish transactions if withdraw_pole = True
 parameter:
-'senderAddress' :  users' address
-'recipientAddress' = proxy 's address 
-'valueTransferred' = the value of cheque
-'v' = the information of signed signature
-'r' = the information of signed signature
-'s' = the information of signed signature
-'edgeAddress' = the selected edges' address
-'withdraw_pole' = whether to withdraw, can only be True or False (bool)
+- 'senderAddress' :  user address
+- 'recipientAddress' = proxy address 
+- 'valueTransferred' = the value of cheque
+- 'v' = the information of signed signature
+- 'r' = the information of signed signature
+- 's' = the information of signed signature
+- 'edgeAddress' = the selected edge address
+- 'withdraw_pole' = whether to withdraw, can only be True or False (bool)
+
+Select Edge URL:  "http://127.0.0.1:7545/selectEdge/"
+for user to select a target edge, 
+this url will response a target edge ssid.
+parameter:
+- 'edgesWiFi': available edges of user (ssid of WiFi)
+
+
 
 
 
