@@ -37,7 +37,7 @@ So the address of contract can be found at Ganache, and you can get abi code at 
   
 # API of existing system
 
-All methods should be used as Post Request
+All methods should be used as Post Request and listed parameters should be provided as data.
 
 Register URL : "http://127.0.0.1:7545/regist/"
 for edge device to register in server
@@ -57,7 +57,7 @@ parameter:
 - 'r' = the information of signed signature
 - 's' = the information of signed signature
 - 'edgeAddress' = the selected edge address
-- 'withdraw_pole' = whether to withdraw, can only be True or False (bool)
+- 'withdraw' = whether to withdraw, can only be True or False (bool)
 
 Select Edge URL:  "http://127.0.0.1:7545/selectEdge/"
 for user to select a target edge, 
