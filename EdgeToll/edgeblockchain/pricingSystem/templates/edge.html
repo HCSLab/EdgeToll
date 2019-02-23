@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Proxy send check</title>
+</head>
+<body>
+    <h1>Proxy SendCheck</h1>
+    <form action="/edge/" method="post">
+        {% csrf_token %}
+        sender Address：<input type="text" name="senderAddress" width="64"/><br />
+        recipient Address: <input type="text" name="recipientAddress" width="64"/><br />
+        signature: <input type="text" name="signature" width="64"/><br />
+        sender Balance: <input type="text" name="senderBalance" width="64"/><br />
+        recipient Balance: <input type="text" name="recipient Balance" width="64"/><br />
+        v: <input type="text" name="v" width="64"/><br />
+        r: <input type="text" name="r" width="64"/><br />
+        s: <input type="text" name="s" width="64"/><br />
+
+        <input type="submit" value="提交" />
+    </form>
+</body>
+</html>

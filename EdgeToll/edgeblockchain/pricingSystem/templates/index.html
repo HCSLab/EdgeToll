@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    <h1>Edge Register：</h1>
+    <form action="/regist/" method="post">
+        {% csrf_token %}
+        Address：<input type="text" name="address" /><br />
+    <!-- <input type="password" name="password" /><br /> -->
+        <input type="submit" value="提交" />
+    </form>
+
+    <h1>Edge Show：</h1>
+    <table border="1">
+        <thead>
+            <tr>Address</tr>
+            <tr>Balance</tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+            <tr>
+                <td>{{ item.address }}</td>
+                <td>{{ item.balance }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- <h1>User SendCheck</h1>
+    <form action="/index/" method="post">
+        {% csrf_token %}
+        sender Address：<input type="text" name="senderAddress" width="64"/><br />
+        recipient Address: <input type="text" name="recipientAddress" width="64"/><br />
+        <input type="submit" value="提交" />
+    </form> -->
+</body>
+</html>
