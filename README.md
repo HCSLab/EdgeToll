@@ -39,14 +39,15 @@ So the address of contract can be found at Ganache, and you can get abi code at 
 
 All methods should be used as Post Request and listed parameters should be provided as data.
 
-Register URL : "http://127.0.0.1:7545/regist/"
+#### Register URL : "http://127.0.0.1:7545/regist/"
 for edge device to register in server, after posting request, the proxy will open a paymentchannel for the provided address
 parameter: 
 - 'address' : the blockchain ethereum address of edge (string in python)
 return: gas fee of registeration 
 
 
-Send Check URL : "http://127.0.0.1:7545/sendCheck/"
+
+####  Send Check URL : "http://127.0.0.1:7545/sendCheck/"
 for user to post cheque to proxy
 parameter:
 - 'senderAddress' :  user address
@@ -59,11 +60,12 @@ parameter:
 - 'withdraw' = whether to withdraw, can only be True or False (bool)
 return: gas cost of publish trasactions when 'withdraw' = True
 
-Select Edge URL:  "http://127.0.0.1:7545/selectEdge/"
+#### Select Edge URL:  "http://127.0.0.1:7545/selectEdge/"
 for user to select a target edge, 
 parameter:
 - 'edgesWiFi': available edges of user (ssid of WiFi)
 return: a target edge's ssid for connection
+
 
 
 
