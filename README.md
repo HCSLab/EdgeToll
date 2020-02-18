@@ -1,7 +1,7 @@
 # EdgeToll
 A Blockchain-based Toll Collection System for Heterogeneous Public Edge Platforms
 
-A research work to be published
+[Click for papers](https://mypage.cuhk.edu.cn/academics/caiwei/paper/XiaoFGC2019.pdf)
 
 # The file architecture
 Inside EdgeToll folder, there are 2 folder:
